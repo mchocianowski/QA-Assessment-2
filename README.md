@@ -72,7 +72,7 @@ Once the installation is complete you can launch Eclipse.<br/>
 
 
 * **Spring**<br/>
-Spring is a framework which can be installed on Eclipse by navigating to 'Help' -> 'Eclipse Marketplace' -> Search for Spring tools 4 and install this. The file you will be looking for looks like this: <img src="documentation/Spring-tools-eclipse"><br/>
+Spring is a framework which can be installed on Eclipse by navigating to 'Help' -> 'Eclipse Marketplace' -> Search for Spring tools 4 and install this. The file you will be looking for looks like this: <img src="documentation/Spring-tools-eclipse.png"><br/>
 
 Once you have successfully installed this Eclipse add on you may go ahead and create a new spring project which will be described futher down. However right now just be aware that due this installation you may need to restart Eclipse and also all dependencies will be available to you when it comes to project creation.
 
