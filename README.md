@@ -9,7 +9,11 @@ Coverage: TBC
 This is my second of three assessments for the QA Academy. The project required a crud application which would allow the user to create, read, update and delete items in an entity. The application is required to have a functioning front-end through the usage of HTML, CSS and Javascript as well as a functioning back-end using Java and the Spring framework. The requirements for this project have been met through usage of various technologies described further in this document and consisted of: Git, Jira, Github, HTML, CSS, Bootstrap, Java, Spring and MySQL.
 
 ## **_Getting Started_**
-In order to get started on the project I first need to start by planning it. To achieve this I used Jira software so that I was able to work in an agile way. Having considered the user stories and tasks related to them for a complete project meeting the MVP I was able to start my sprint and thus move onto the next step of creating an empty GitHub repository. Once the Github repository was created I then opened up Eclipse and started a new Spring project. Having done so allowed me to initiate the local repository as a git repository and create the README.md file and the LICENSE.md file. I then set a new remote repository equal to the one I had created in GitHub (Using the HTTPS key) and was ready to push my first commit.
+In order to get started on the project I first needed to start by planning it. To achieve this I used Jira software so that I was able to work in an agile way. Having considered the user stories and tasks related to them for a complete project meeting the MVP I was able to start my sprint; thus moving onto the next step of creating some initial wireframes, carefully considering what whould be included in a desktop(Figure 1) and mobile (Figure 2) version of the web app in order to meet the user stories. Once these were complete I created an empty GitHub repository. Once the Github repository was created I then opened up Eclipse and started a new Spring project. Having done so allowed me to initiate the local repository as a git repository and create the README.md file and the LICENSE.md file. I then set a new remote repository equal to the one I had created in GitHub (Using the HTTPS key) and was ready to push my first commit.<br/>
+Figure 1:<br/>
+![Figure 1](documentation/Initial-wireframe-desktop.png)<br/>
+Figure 2:<br/>
+![Figure 2](documentation/Initial-wireframe-mobile.png)<br/>
 
 
 ## **_Project Planning_**
