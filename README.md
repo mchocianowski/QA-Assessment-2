@@ -82,18 +82,25 @@ Once you have successfully installed this Eclipse add on you may go ahead and cr
 
 
 * **VSCode**<br/>
-
+Microsoft Visual Studio Code is a free source code editor which unlike eclipse supports many languages. Of course some people may prefer to use a code editor specific to the language they are working in. However for front end languages VSCode with a few plugins has been good to me. Installing VSCode is easy, quick and can be found [here](https://code.visualstudio.com/). Once installed you can simply open VS code and start to code, for this project I used the following plugins which can be installed in the VS code extensions marketplace: Live server and Prettier. Live Server allows us to open a preview of our front-end code whilst Prettier enables us to easily format our HTML, CSS and JS code.
 
 
 * **PostMan**<br/>
 
-
-
+Postman is a standalone tool that utilises web APIs by making HTTP requests from outside the service. Postman allows you to test user created end-points efficiently and can be downloaded [here](https://www.postman.com/downloads/). Again just like with VSCode the installation is quick and easy. Postman will be ready to use straight after by simply launching the app.
 
 
 ## **_Deployment_**
 
-Although this project is not a project which is being deployed I'd like to take the opportunity to demonstrate my knowledge of project deployment. Firstly deploying a project is what makes it live, until the project is deployed it can only be accessed within the repository so only code and any preview tools such as Gitpod's preview tool can be used to see a preview of what the live application would look like. Web applications will be deployed via Github settings, if being deployed via Github. However they can also be deployed via other means such as Heroku this would involve connecting the master branch to Heroku and then push your commits and deploying the app via the Heroku dashboard. <br/>
+Although this project is not a project which is being deployed I'd like to take the opportunity to demonstrate my knowledge of project deployment. Firstly deploying a project is what makes it live, until the project is deployed it can only be accessed within the repository so only code and any preview tools such as Gitpod's preview tool can be used to see a preview of what the live application would look like. Web applications will be deployed via Github settings, if being deployed via Github. However they can also be deployed via other means such as Heroku this would involve connecting the master branch to Heroku and then push your commits and deploying the app via the Heroku dashboard. Deploying via cloud platforms such as Heroku or AWS can be an in depth process.<br/>
+An application such as this one where there is a front and back-end section to the application requires a server inorder to remain fully functioning, this can be done either by hosting a local server or cloud server which is down to the developer or in larger cases the project manager or the company - In other words the person who would be covering the cost of running the application. Local servers are cheaper as it is a one off cost to purchase a server or a second machine dedicated as a server, however things like running costs would also need to be factored in. On the other hand cloud servers are handy as storage is often expandable with a matter of clicks if the company was to grow or the application of a sole developer becomes so successful that he/she would need to consider this. Cloud server examples examples include Google Cloud Platform (GCP) and Amazon Web Services (AWS). <br/>
+Further to the above an example of deploying a Spring boot application through Heroku for example can be done like this as one of many ways(The below example can slaso be found [here](https://www.callicoder.com/deploy-host-spring-boot-apps-on-heroku/) as well as a few other ways of depolying a spring boot app with heroku:<br/>
+* Firstly, specify the port that the application should listen to in a property named server.port in the src/main/java/resources/application.properties: server.port=${PORT:8080}
+* Secondly, Enter the following command in your terminal to install the heroku-cli-deploy plugin: heroku plugins:install heroku-cli-deploy
+* Package your Spring Boot application.(Just like in the QA-Project-One IMS Project) You can do that using mvn package command: mvn clean package
+* Create a Heroku app by running this command: heroku create <APP-NAME> --no-remote
+* Notice the use of --no-remote option. This tells heroku to not setup any git remote repository.
+* Deploy the jar file on Heroku: heroku deploy:jar target/heroku-demo-0.0.1-SNAPSHOT.jar --app <APP-NAME>
 
 For local deployment of apps the end user can begin by navigating to the GitHub repository then clicking the Code drop down menu the user can choose to Download the ZIP file, unpackage locally and open with IDE (This route ends here).<br/>
 Or alternatively copy the Git URL from the HTTPS dialogue box. Open the development editor of choice and open a terminal window in a directory of  choice. Then using the 'git clone' command in terminal followed by the copied git URL. Finally a project clone will be created locally on the users machine.
