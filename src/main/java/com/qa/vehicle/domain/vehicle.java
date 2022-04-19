@@ -25,6 +25,46 @@ public class vehicle{
 	public vehicle() {
 		super();
 	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public Integer getPrice() {
+		return price;
+	}
+
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+
+	public Integer getMileage() {
+		return mileage;
+	}
+
+	public void setMileage(Integer mileage) {
+		this.mileage = mileage;
+	}
 	
 	
 }
