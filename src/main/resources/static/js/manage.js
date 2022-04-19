@@ -52,3 +52,8 @@ const deleteById = () => {
       console.log(err);
     });
 };
+
+// set up the buttons' on click events
+DOM.buttonCreate.onclick = () => post();
+DOM.buttonUpdate.onclick = () => update();
+DOM.buttonDelete.onclick = () => deleteById();
