@@ -11,8 +11,9 @@ public interface VehicleRepo extends JpaRepository<Vehicle, Integer> {
 	
 	//SPRING WILL AUTO-GENERATE ALL OF THE BASIC CRUD FUNCTIONALITY :)
 	
-	List<Vehicle> findByNameIgnoreCase(String brand);
-	List<Vehicle> findByBreedIgnoreCase(String model);
-	List<Vehicle> findByGenderIgnoreCase(Integer price);
-	List<Vehicle> findByAge(Integer mileage);
+	List<Vehicle> findByBrandIgnoreCase(String brand);
+	List<Vehicle> findByModelIgnoreCase(String model);
+	List<Vehicle> findByPriceIgnoreCase(Integer price);
+	List<Vehicle> findByPrice(Integer mileage);
+	List<Vehicle> findByMileage(Integer mileage);
 }
