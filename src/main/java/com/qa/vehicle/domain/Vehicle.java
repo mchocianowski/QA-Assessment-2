@@ -1,16 +1,28 @@
 package com.qa.vehicle.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Vehicle{
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
+	@Column(nullable = false)
 	private String brand;
 	
+	@Column(nullable = false)
 	private String model;
 	
+	@Column(nullable = false)
 	private Integer price;
 	
+	@Column(nullable = false)
 	private Integer mileage;
 
 	public Vehicle(Integer id, String brand, String model, Integer price, Integer mileage) {
