@@ -65,6 +65,12 @@ public class vehicle{
 	public void setMileage(Integer mileage) {
 		this.mileage = mileage;
 	}
+
+	@Override
+	public String toString() {
+		return "vehicle [id=" + id + ", brand=" + brand + ", model=" + model + ", price=" + price + ", mileage="
+				+ mileage + "]";
+	}
 	
 	
 }
