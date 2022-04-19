@@ -13,7 +13,6 @@ public interface VehicleRepo extends JpaRepository<Vehicle, Integer> {
 	
 	List<Vehicle> findByBrandIgnoreCase(String brand);
 	List<Vehicle> findByModelIgnoreCase(String model);
-	List<Vehicle> findByPriceIgnoreCase(Integer price);
-	List<Vehicle> findByPrice(Integer mileage);
+	List<Vehicle> findByPrice(Integer price);
 	List<Vehicle> findByMileage(Integer mileage);
 }
