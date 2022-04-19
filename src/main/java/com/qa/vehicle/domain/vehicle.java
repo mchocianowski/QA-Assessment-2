@@ -1,7 +1,7 @@
 package com.qa.vehicle.domain;
 
 
-public class vehicle{
+public class Vehicle{
 	
 	private Integer id;
 
@@ -13,7 +13,7 @@ public class vehicle{
 	
 	private Integer mileage;
 
-	public vehicle(Integer id, String brand, String model, Integer price, Integer mileage) {
+	public Vehicle(Integer id, String brand, String model, Integer price, Integer mileage) {
 		super();
 		this.id = id;
 		this.brand = brand;
@@ -22,7 +22,7 @@ public class vehicle{
 		this.mileage = mileage;
 	}
 
-	public vehicle() {
+	public Vehicle() {
 		super();
 	}
 
