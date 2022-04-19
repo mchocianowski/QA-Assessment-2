@@ -21,6 +21,10 @@ public class vehicle{
 		this.price = price;
 		this.mileage = mileage;
 	}
+
+	public vehicle() {
+		super();
+	}
 	
 	
 }
