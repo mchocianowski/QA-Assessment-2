@@ -41,7 +41,7 @@ public class VehicleService {
 			return found;
 		}
 			
-		public List<Vehicle> getDogsByPrice(Integer price) {
+		public List<Vehicle> getVehiclesByPrice(Integer price) {
 			List<Vehicle> found = this.vrepo.findByPrice(price);
 			return found;
 		}
