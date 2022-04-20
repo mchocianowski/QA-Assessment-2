@@ -48,7 +48,6 @@ const get = () => {
 // GET By Id function
 const getById = () => {
   let id = DOM.readId.value;
-  console.log(id);
   let output = DOM.listOutput;
   axios
     .get(`http://localhost:8080/get/${id}`)
@@ -80,10 +79,10 @@ const getByBrand = () => {
 
 // GET By Price function
 const getByPrice = () => {
-  let brand = DOM.readPrice.value;
+  let price = DOM.readPrice.value;
   let output = DOM.listOutput;
   axios
-    .get(`http://localhost:8080/readByPrice/` + price)
+    .get(`http://localhost:8080/getByPrice/${price}`)
     .then((response) => {
       output.innerHTML = ` `;
       for (let vitem of response.data) {
@@ -116,7 +115,5 @@ const getByMileage = () => {
 DOM.buttonViewAll.onclick = () => get();
 DOM.buttonReadById.onclick = () => getById();
 DOM.buttonReadByBrand.onclick = () => getByBrand();
-// DOM.buttonReadByPrice.onclick = () => getByPrice();
+DOM.buttonReadByPrice.onclick = () => getByPrice();
 // DOM.buttonReadByMileage.onclick = () => getByMileage();
-// DOM.buttonCreate.onclick = () => post();
-// DOM.buttonDelete.onclick = () => deleteById();
