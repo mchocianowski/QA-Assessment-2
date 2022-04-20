@@ -4,18 +4,106 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Manage</title>
   </head>
   <body>
+
+    <header>
+      <div class="row">
+          <div class="col-md-12">
+              <nav class="navbar navbar-expand-md justify-content-center bg-dark">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link active" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="view.html">View Listings</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="manage.html">Manage Listings</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </header>
+
     <div class="col-sm-12">
       <div class="container">
         <form action="">
           <label for="brand">Vehicle Brand</label>
-          <input
-            type="text"
-            id="inputBrand"
-            placeholder="Enter Vehicle Brand..."
-          />
+          <select type="text" id="inputBrand">
+            <option value="Abarth">Abarth</option>
+            <option value="Alfa Romeo">Alfa Romeo</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="Audi">Audi</option>
+            <option value="Bentley">Bentley</option>
+            <option value="BMW">BMW</option>
+            <option value="Bugatti">Bugatti</option>
+            <option value="Cadillac">Cadillac</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Chrysler">Chrysler</option>
+            <option value="Citroën">Citroën</option>
+            <option value="Dacia">Dacia</option>
+            <option value="Daewoo">Daewoo</option>
+            <option value="Daihatsu">Daihatsu</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Donkervoort">Donkervoort</option>
+            <option value="DS">DS</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Fisker">Fisker</option>
+            <option value="Ford">Ford</option>
+            <option value="Honda">Honda</option>
+            <option value="Hummer">Hummer</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Infiniti">Infiniti</option>
+            <option value="Iveco">Iveco</option>
+            <option value="Jaguar">Jaguar</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Kia">Kia</option>
+            <option value="KTM">KTM</option>
+            <option value="Lada">Lada</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Lancia">Lancia</option>
+            <option value="Land Rover">Land Rover</option>
+            <option value="Landwind">Landwind</option>
+            <option value="Lexus">Lexus</option>
+            <option value="Lotus">Lotus</option>
+            <option value="Maserati ">Maserati</option>
+            <option value="Maybach">Maybach</option>
+            <option value="Mazda">Mazda</option>
+            <option value="McLaren">McLaren</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="MG">MG</option>
+            <option value="Mini">Mini</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Morgan">Morgan</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Opel">Opel</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Renault">Renault</option>
+            <option value="Rolls-Royce">Rolls-Royce</option>
+            <option value="Rover">Rover</option>
+            <option value="Saab">Saab</option>
+            <option value="Seat">Seat</option>
+            <option value="Skoda">Skoda</option>
+            <option value="Smart">Smart</option>
+            <option value="SsangYong">SsangYong</option>
+            <option value="Subaru">Subaru</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Tesla">Tesla</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Other">Other / Not-Listed</option>
+          </select>
 
           <label for="model">Vehicle Model</label>
           <input
@@ -24,35 +112,19 @@
             placeholder="Enter Vehicle Model..."
           />
 
-          <label for="price">Price</label>
-          <select type="number" id="inputPrice">
-            <option value="500">£500</option>
-            <option value="1000">£1000</option>
-            <option value="1500">£1500</option>
-            <option value="2000">£2000</option>
-            <option value="2500">£2500</option>
-            <option value="3000">£3000</option>
-            <option value="3500">£3500</option>
-            <option value="4000">£4000</option>
-            <option value="4500">£4500</option>
-            <option value="5000">£5000</option>
-            <option value="5500">£5500</option>
-          </select>
+          <label for="model">Vehicle Price £</label>
+          <input
+            type="text"
+            id="inputPrice"
+            placeholder="Enter Vehicle Price..."
+          />
 
-          <label for="mileage">Mileage</label>
-          <select type="number" id="inputMileage">
-            <option value="1000">1000</option>
-            <option value="2000">2000</option>
-            <option value="3000">3000</option>
-            <option value="4000">4000</option>
-            <option value="5000">5000</option>
-            <option value="6000">6000</option>
-            <option value="7000">7000</option>
-            <option value="8000">8000</option>
-            <option value="9000">9000</option>
-            <option value="10000">10000</option>
-            <option value="11000">11000</option>
-          </select>
+          <label for="mileage">Vehicle Mileage</label>
+          <input
+            type="text"
+            id="inputMileage"
+            placeholder="Enter Vehicle Mileage..."
+          />
 
           <button type="button" id="buttonCreate">Create</button>
         </form>
@@ -127,6 +199,7 @@
         <button type="button" id="buttonDelete">Delete</button>
       </form>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./js/manage.js"></script>
     <script
