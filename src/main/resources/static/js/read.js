@@ -1,10 +1,7 @@
 `use strict`;
-console.log("File connected");
+
 // import the dom
 import * as DOM from "./dom.js";
-
-// console.log(DOM.buttonViewAll);
-console.log("File connected");
 
 // list item function
 const writeVItem = (vitem) => {
@@ -69,7 +66,7 @@ const getByBrand = () => {
   let brand = DOM.readBrand.value;
   let output = DOM.listOutput;
   axios
-    .get(`http://localhost:8080/readByBrand/` + brand)
+    .get(`http://localhost:8080/getByBrand/${brand}`)
     .then((response) => {
       output.innerHTML = ` `;
       for (let vitem of response.data) {
@@ -118,7 +115,7 @@ const getByMileage = () => {
 // set up the buttons' on click events
 DOM.buttonViewAll.onclick = () => get();
 DOM.buttonReadById.onclick = () => getById();
-// DOM.buttonReadByBrand.onclick = () => getByBrand();
+DOM.buttonReadByBrand.onclick = () => getByBrand();
 // DOM.buttonReadByPrice.onclick = () => getByPrice();
 // DOM.buttonReadByMileage.onclick = () => getByMileage();
 // DOM.buttonCreate.onclick = () => post();
