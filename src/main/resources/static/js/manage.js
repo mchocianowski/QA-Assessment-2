@@ -5,8 +5,7 @@ import * as DOM from "./dom.js";
 
 // POST function
 const post = () => {
-  axios
-    .post(`http://localhost8080/create/`, {
+  axios.post(`http://localhost:8080/create/`, {
       brand: DOM.inputBrand.value,
       model: DOM.inputModel.value,
       price: DOM.inputPrice.value,
@@ -23,12 +22,11 @@ const post = () => {
 // UPDATE function
 const update = () => {
   let id = DOM.updateId.value;
-  axios
-    .put(`http://localhost8080/replace/` + id, {
+  axios.put(`http://localhost:8080/replace/` + id, {
       brand: DOM.updateBrand.value,
       model: DOM.updateModel.value,
       price: DOM.updatePrice.value,
-      mileage: DOM.inputMileage.value,
+      mileage: DOM.updateMileage.value,
     })
     .then((response) => {
       console.log(response);
@@ -43,7 +41,7 @@ const update = () => {
 const deleteById = () => {
   let id = DOM.deleteId.value;
   axios
-    .delete(`http://localhost8080/remove/` + id, { id: DOM.deleteId.value })
+    .delete(`http://localhost:8080/remove/` + id, { id: DOM.deleteId.value })
     .then((response) => {
       console.log(response);
       get();
