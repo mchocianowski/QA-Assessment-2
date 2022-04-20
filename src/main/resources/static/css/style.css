@@ -42,3 +42,27 @@ textarea {
     border-radius: 4px; 
     cursor: pointer;
 }
+
+ul.listOutput {
+    background: #00c8ff;
+    margin: auto;
+    text-align:center;
+    max-width: 300px;
+    padding: 0px;
+  }
+  
+  
+ul.listOutput li {
+    background: #00c8ff;
+    max-width: 300px;
+    margin: auto;
+    text-align:center;
+    color: white;
+    margin: 5px;
+  }
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
+  }
