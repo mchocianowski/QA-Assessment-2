@@ -12,10 +12,10 @@ const writeVItem = (vitem) => {
   const mileage = document.createElement(`li`);
   listbody.id = vitem._id;
 
-  brand.innerHTML = `Brand: ${vitem.brand}`
-  model.innerHTML = `Model: ${vitem.model}`
-  price.innerHTML = `Price: ${vitem.price}`
-  model.innerHTML = `Mileage: ${vitem.mileage}`
+  brand.innerHTML = `Brand: ${vitem.brand}`;
+  model.innerHTML = `Model: ${vitem.model}`;
+  price.innerHTML = `Price: ${vitem.price}`;
+  mileage.innerHTML = `Mileage: ${vitem.mileage}`;
   listbody.appendChild(brand);
   listbody.appendChild(model);
   listbody.appendChild(price);
@@ -25,7 +25,6 @@ const writeVItem = (vitem) => {
 
 // GET all function
 const get = () => {
-  console.log(DOM.listOutput);
   DOM.listOutput.innerHTML = ``;
 
   axios
