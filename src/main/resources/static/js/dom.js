@@ -7,12 +7,12 @@ export const buttonCreate = document.getElementById(`buttonCreate`);
 
 export const readId = document.getElementById(`readId`);
 export const buttonReadById = document.getElementById(`buttonReadById`);
-export const readBrand = document.getElementByBrand(`readBrand`);
-export const buttonReadByBrand = document.getElementByBrand(`buttonReadByBrand`);
-export const readPrice = document.getElementByBrand(`readPrice`);
-export const buttonReadByPrice = document.getElementByPrice(`buttonReadByPrice`);
-export const readMileage = document.getElementByMileage(`readMileage`);
-export const buttonReadByMileage = document.getElementByMileage(`buttonReadByMileage`);
+export const readBrand = document.getElementById(`readBrand`);
+export const buttonReadByBrand = document.getElementById(`buttonReadByBrand`);
+export const readPrice = document.getElementById(`readPrice`);
+export const buttonReadByPrice = document.getElementById(`buttonReadByPrice`);
+export const readMileage = document.getElementById(`readMileage`);
+export const buttonReadByMileage = document.getElementById(`buttonReadByMileage`);
 export const buttonViewAll = document.getElementById(`buttonViewAll`);
 
 export const updateBrand = document.getElementById(`updateBrand`);
