@@ -1,7 +1,9 @@
 package com.qa.vehicle.web;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -113,5 +115,29 @@ public class VehicleControllerIntegratedTest {
 		ResultMatcher checkBody = content().json(testVehicleAsJSON);
 		
 		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void replaceTest() throws Exception {
+		
+		Vehicle testVehicle = new Vehicle(1,"Tesla", "model 3", 30000, 50000);
+		String testVehicleAsJSON = this.mapper.writeValueAsString(testVehicle);
+		RequestBuilder req = put("/replace/1").contentType(MediaType.APPLICATION_JSON).content(testVehicleAsJSON);
+		
+		ResultMatcher checkStatus = status().isAccepted();
+		ResultMatcher checkBody = content().json(testVehicleAsJSON);
+		
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void removeTest() throws Exception {
+		
+		Vehicle testVehicle = new Vehicle(1,"Tesla", "model 3", 30000, 50000);
+		String testVehicleAsJSON = this.mapper.writeValueAsString(testVehicle);
+		RequestBuilder req = delete("/remove/1").contentType(MediaType.APPLICATION_JSON).content(testVehicleAsJSON);
+		
+		ResultMatcher checkStatus = status().isNoContent();
+		this.mvc.perform(req).andExpect(checkStatus);
 	}
 }
