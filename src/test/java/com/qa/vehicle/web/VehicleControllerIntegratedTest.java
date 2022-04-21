@@ -62,4 +62,56 @@ public class VehicleControllerIntegratedTest {
 		
 		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
 	}
+	
+	@Test
+	void getByIdTest() throws Exception {
+		
+		Vehicle testVehicle = new Vehicle(1,"Tesla", "model 3", 30000, 50000);
+		String testVehicleAsJSON = this.mapper.writeValueAsString(testVehicle);
+		RequestBuilder req = get("/get/1").contentType(MediaType.APPLICATION_JSON).content(testVehicleAsJSON);
+		
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(testVehicleAsJSON);
+		
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void getByBrandTest() throws Exception {
+		
+		List<Vehicle> testVehicle = List.of(new Vehicle(1,"Tesla", "model 3", 30000, 50000));
+		String testVehicleAsJSON = this.mapper.writeValueAsString(testVehicle);
+		RequestBuilder req = get("/getByBrand/Tesla").contentType(MediaType.APPLICATION_JSON).content(testVehicleAsJSON);
+		
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(testVehicleAsJSON);
+		
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void getByPriceTest() throws Exception {
+		
+		List<Vehicle> testVehicle = List.of(new Vehicle(1,"Tesla", "model 3", 30000, 50000));
+		String testVehicleAsJSON = this.mapper.writeValueAsString(testVehicle);
+		RequestBuilder req = get("/getByPrice/30000").contentType(MediaType.APPLICATION_JSON).content(testVehicleAsJSON);
+		
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(testVehicleAsJSON);
+		
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void getByMileageTest() throws Exception {
+		
+		List<Vehicle> testVehicle = List.of(new Vehicle(1,"Tesla", "model 3", 30000, 50000));
+		String testVehicleAsJSON = this.mapper.writeValueAsString(testVehicle);
+		RequestBuilder req = get("/getByMileage/50000").contentType(MediaType.APPLICATION_JSON).content(testVehicleAsJSON);
+		
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(testVehicleAsJSON);
+		
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+	}
 }
