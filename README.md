@@ -1,4 +1,4 @@
-Coverage: TBC
+Coverage: 85.9%
 
 [My Final Presentation](documentation/Final-Presentation.pptx)
 
@@ -17,7 +17,7 @@ Figure 2:<br/>
 
 
 ## **_Project Planning_**
-* **The UML diagram:** <br/> <img src="Documentation/controller-UML.png"><br/>
+* **The UML diagram:** <br/> <img src="Documentation/uml-diagram.png"><br/>
 * [The risk assessment](documentation/QA-Assessment-2-RiskAssessment.pdf)<br/>
 * [The risk assessment matrix](documentation/QA-Assessment-2-RiskAssessmentMatrix.pdf)<br/>
 
@@ -89,12 +89,71 @@ Microsoft Visual Studio Code is a free source code editor which unlike eclipse s
 
 Postman is a standalone tool that utilises web APIs by making HTTP requests from outside the service. Postman allows you to test user created end-points efficiently and can be downloaded [here](https://www.postman.com/downloads/). Again just like with VSCode the installation is quick and easy. Postman will be ready to use straight after by simply launching the app.
 
+## **_How these technologies were used_**
+
+* **Github And Git**<br/>
+
+I have used Github for version control. I implemented feature branches to manage each new feature developed within the project. To do this we can use the git command git branch branchname to create a new branch or git checkout -b branchname to create and immedietly start working in the new branch. I used pull requests and merges to merge from a feature branch to the dev branch, which when ready will be merged into main. 
+
+* **Jira**<br/>
+
+I used jira for planning my project. I created issues in the form of user stories and tasks. User stories have acceptance criteria which need to be met and are in the description of the issue. User stories would also have child issues(Figure 5) in the form of tasks which needed to be completed in order for the acceptance criteria to be satisfied. Some child issues would be either used to block or were blocked by other tasks within the board- a block is when another issue stops the issue in question from being completed this introduces some order to the project. I Also connected Github to Jira which allowed smart commits which meant that my work was commenting onto the jira issue I specified when making a commit to Github(Figure 6). Again this is useful for order and tracking project progress to see which tasks have work against them making me 100% I am sticking to plan and completeing the assigned tasks.
+
+![Figure 5](documentation/Child-issues-blocked-by-tasks.png)
+![Figure 6](documentation/commit-messages-in-jira.png)
+
+
+* **Maven**<br/>
+
+Maven was used to handle project dependencies and was actually preimplemented by the spring starter project.
+
+* **MySQL**<br/>
+
+MySQL was used to create a database and be the local server for my project. This was one of the last things I did as throughout development I just used a h2 server to tes the functionality of the project.
+
+* **Eclipse**<br/>
+
+Eclipse is an IDE specially for coding in java and supports the Spring framework from its marketplace. Therefore Spring was my go to IDE for coding and setting up the backend of the application.
+
+* **Spring Boot**<br/>
+
+I used the Spring Boot framework to bulid the application. The Spring starter project available to me from Eclipse had premade all pre-required files and folder including Maven Dependencies and a git ignore file.
+
+* **VS Code**<br/>
+
+I used VS code and an extension called prettier to write up my front end and the javascript to handle the communication between front and back-end. VS code is a simple to use IDE in my opinion and supports losts of languages therefore this is why I used it to handle the front end languages.
+
+* **Postman**<br/>
+
+I used Postman to test that the backend worked without having a front end made for my application. This was useful in sense that I was 100% certain my backend worked before connecting my front end to it, which in turn probably halved m debugging process.
+
+* **HTML, CSS, JS**<br/>
+
+I used HTML(Hypertext Markup Language) to display information on a webpage to the user. CSS enabled me to style my HTML code. Javascript allowed me to add interaction to my webpage by allowing me to connect the front end to my back end.
+
+* **Java**<br/>
+
+I used Java along with the Java framework Spring Boot to develop my back end.
+
+* **Bootstrap**<br/>
+
+I used Bootstrap to add a navbar to my application and also for bootstrap grid which allowed me to program my web app with a mobile first design.
+
+
+## **_Testing_**<br/>
+
+For this project I used integrated testing to test my back-end. The Spring boot Test was used for these tests and all that was need was the @SpringBootTest annotation at the top of my test class. I used object mocking using the controller layer of the application for my test and mocked the controller class using MockMVC and the @AutoConfigureMockMvc annotation. This allowed me to test 85.9% of my back-end application which is higher than the 80% industry standard (figure 7).<br/>
+
+![Figure 7](documentation/percentage-test-coverage.png)
 
 ## **_Deployment_**
 
 Although this project is not a project which is being deployed I'd like to take the opportunity to demonstrate my knowledge of project deployment. Firstly deploying a project is what makes it live, until the project is deployed it can only be accessed within the repository so only code and any preview tools such as Gitpod's preview tool can be used to see a preview of what the live application would look like. Web applications will be deployed via Github settings, if being deployed via Github. However they can also be deployed via other means such as Heroku this would involve connecting the master branch to Heroku and then push your commits and deploying the app via the Heroku dashboard. Deploying via cloud platforms such as Heroku or AWS can be an in depth process.<br/>
+
 An application such as this one where there is a front and back-end section to the application requires a server inorder to remain fully functioning, this can be done either by hosting a local server or cloud server which is down to the developer or in larger cases the project manager or the company - In other words the person who would be covering the cost of running the application. Local servers are cheaper as it is a one off cost to purchase a server or a second machine dedicated as a server, however things like running costs would also need to be factored in. On the other hand cloud servers are handy as storage is often expandable with a matter of clicks if the company was to grow or the application of a sole developer becomes so successful that he/she would need to consider this. Cloud server examples examples include Google Cloud Platform (GCP) and Amazon Web Services (AWS). <br/>
+
 Further to the above an example of deploying a Spring boot application through Heroku for example can be done like this as one of many ways(The below example can slaso be found [here](https://www.callicoder.com/deploy-host-spring-boot-apps-on-heroku/) as well as a few other ways of depolying a spring boot app with heroku:<br/>
+
 * Firstly, specify the port that the application should listen to in a property named server.port in the src/main/java/resources/application.properties: server.port=${PORT:8080}
 * Secondly, Enter the following command in your terminal to install the heroku-cli-deploy plugin: heroku plugins:install heroku-cli-deploy
 * Package your Spring Boot application.(Just like in the QA-Project-One IMS Project) You can do that using mvn package command: mvn clean package
@@ -103,6 +162,7 @@ Further to the above an example of deploying a Spring boot application through H
 * Deploy the jar file on Heroku: heroku deploy:jar target/heroku-demo-0.0.1-SNAPSHOT.jar --app <APP-NAME>
 
 For local deployment of apps the end user can begin by navigating to the GitHub repository then clicking the Code drop down menu the user can choose to Download the ZIP file, unpackage locally and open with IDE (This route ends here).<br/>
+
 Or alternatively copy the Git URL from the HTTPS dialogue box. Open the development editor of choice and open a terminal window in a directory of  choice. Then using the 'git clone' command in terminal followed by the copied git URL. Finally a project clone will be created locally on the users machine.
 
 ## **Built With**
