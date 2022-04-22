@@ -6,16 +6,19 @@ import * as DOM from "./dom.js";
 // list item function
 const writeVItem = (vitem) => {
   const listbody = document.createElement(`div`);
+  const id = document.createElement(`li`);
   const brand = document.createElement(`li`);
   const model = document.createElement(`li`);
   const price = document.createElement(`li`);
   const mileage = document.createElement(`li`);
   listbody.id = vitem._id;
 
+  id.innerHTML = `ID: ${vitem.id}`;
   brand.innerHTML = `Brand: ${vitem.brand}`;
   model.innerHTML = `Model: ${vitem.model}`;
   price.innerHTML = `Price: ${vitem.price}`;
   mileage.innerHTML = `Mileage: ${vitem.mileage}`;
+  listbody.appendChild(id);
   listbody.appendChild(brand);
   listbody.appendChild(model);
   listbody.appendChild(price);
