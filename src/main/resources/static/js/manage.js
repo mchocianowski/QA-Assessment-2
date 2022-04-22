@@ -3,6 +3,7 @@
 // import the dom
 import * as DOM from "./dom.js";
 
+
 // POST function
 const post = () => {
   axios.post(`http://localhost:8080/create/`, {
@@ -13,6 +14,7 @@ const post = () => {
     })
     .then((response) => {
       console.log(response);
+      alert("Thank you for submitting your form. Your listing has now been created.");
     })
     .catch((err) => {
       console.log(err);
@@ -30,7 +32,7 @@ const update = () => {
     })
     .then((response) => {
       console.log(response);
-      get();
+      alert("Thank you for submitting your form. Your listing has now been updated.");
     })
     .catch((err) => {
       console.log(err);
@@ -44,7 +46,7 @@ const deleteById = () => {
     .delete(`http://localhost:8080/remove/` + id, { id: DOM.deleteId.value })
     .then((response) => {
       console.log(response);
-      get();
+      alert("Thank you for submitting your form. Your listing has now been deleted.");
     })
     .catch((err) => {
       console.log(err);
