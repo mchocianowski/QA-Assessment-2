@@ -15,9 +15,14 @@ Figure 1:<br/>
 Figure 2:<br/>
 ![Figure 2](documentation/Initial-wireframe-mobile.png)<br/>
 
+## **_Design Changes_**
+As can be seen in Figure 3 and 4. My final design changes have grown a little since the initial design. The website has three pages in total as oppose to just one page, it therefore features a navbar. The application has been designed with mobile first in mind which means it looks good on all devices aside from 4k screens which would have been a future design improvement. The website also displays alert messages ran by the javascript upon form submission which can be seen in Figure 5. This is to mke the users experience with using the app just a little mre friendly.
+![Figure 3](documentation/final-desktop-wireframe.png)<br/>
+![Figure 4](documentation/Initial-mobile-wireframe.png)<br/>
+![Figure 5](documentation/alert-message.png)<br/>
 
 ## **_Project Planning_**
-* **The UML diagram:** <br/> <img src="Documentation/uml-diagram.png"><br/>
+* **The UML diagram:** <br/> <img src="documentation/uml-diagram.png"><br/>
 * [The risk assessment](documentation/QA-Assessment-2-RiskAssessment.pdf)<br/>
 * [The risk assessment matrix](documentation/QA-Assessment-2-RiskAssessmentMatrix.pdf)<br/>
 
@@ -97,10 +102,10 @@ I have used Github for version control. I implemented feature branches to manage
 
 * **Jira**<br/>
 
-I used jira for planning my project. I created issues in the form of user stories and tasks. User stories have acceptance criteria which need to be met and are in the description of the issue. User stories would also have child issues(Figure 5) in the form of tasks which needed to be completed in order for the acceptance criteria to be satisfied. Some child issues would be either used to block or were blocked by other tasks within the board- a block is when another issue stops the issue in question from being completed this introduces some order to the project. I Also connected Github to Jira which allowed smart commits which meant that my work was commenting onto the jira issue I specified when making a commit to Github(Figure 6). Again this is useful for order and tracking project progress to see which tasks have work against them making me 100% I am sticking to plan and completeing the assigned tasks.
+I used jira for planning my project. I created issues in the form of user stories and tasks. User stories have acceptance criteria which need to be met and are in the description of the issue. User stories would also have child issues(Figure 6) in the form of tasks which needed to be completed in order for the acceptance criteria to be satisfied. Some child issues would be either used to block or were blocked by other tasks within the board- a block is when another issue stops the issue in question from being completed this introduces some order to the project. I Also connected Github to Jira which allowed smart commits which meant that my work was commenting onto the jira issue I specified when making a commit to Github(Figure 7). Again this is useful for order and tracking project progress to see which tasks have work against them making me 100% I am sticking to plan and completeing the assigned tasks.
 
-![Figure 5](documentation/Child-issues-blocked-by-tasks.png)
-![Figure 6](documentation/commit-messages-in-jira.png)
+![Figure 6](documentation/Child-issues-blocked-by-tasks.png)
+![Figure 7](documentation/commit-messages-in-jira.png)
 
 
 * **Maven**<br/>
@@ -142,9 +147,9 @@ I used Bootstrap to add a navbar to my application and also for bootstrap grid w
 
 ## **_Testing_**<br/>
 
-For this project I used integrated testing to test my back-end. The Spring boot Test was used for these tests and all that was need was the @SpringBootTest annotation at the top of my test class. I used object mocking using the controller layer of the application for my test and mocked the controller class using MockMVC and the @AutoConfigureMockMvc annotation. This allowed me to test 85.9% of my back-end application which is higher than the 80% industry standard (figure 7).<br/>
+For this project I used integrated testing to test my back-end. The Spring boot Test was used for these tests and all that was need was the @SpringBootTest annotation at the top of my test class. I used object mocking using the controller layer of the application for my test and mocked the controller class using MockMVC and the @AutoConfigureMockMvc annotation. This allowed me to test 85.9% of my back-end application which is higher than the 80% industry standard (figure 8).<br/>
 
-![Figure 7](documentation/percentage-test-coverage.png)
+![Figure 8](documentation/percentage-test-coverage.png)
 
 ## **_Deployment_**
 
@@ -198,3 +203,9 @@ We use [SemVer](http://semver.org/) for versioning.<br/>
 This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details 
 
 *For help in [Choosing a license](https://choosealicense.com/)*
+
+## **Acknowledgements**
+
+* Old HTML/CSS Project from my github.
+* [Bootstrap](https://getbootstrap.com/docs/4.0/components/navbar/) For navbar and the use of bootstrap grid for a mobile friendly design.
+* [W3 Schools](https://www.w3schools.com/css/css_list.asp) For removing list bullet points and styling the list.
