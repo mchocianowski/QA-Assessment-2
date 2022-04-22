@@ -18,7 +18,7 @@ Figure 2:<br/>
 ## **_Design Changes_**
 As can be seen in Figure 3 and 4. My final design changes have grown a little since the initial design. The website has three pages in total as oppose to just one page, it therefore features a navbar. The application has been designed with mobile first in mind which means it looks good on all devices aside from 4k screens which would have been a future design improvement. The website also displays alert messages ran by the javascript upon form submission which can be seen in Figure 5. This is to mke the users experience with using the app just a little mre friendly.
 ![Figure 3](documentation/final-desktop-wireframe.png)<br/>
-![Figure 4](documentation/Initial-mobile-wireframe.png)<br/>
+![Figure 4](documentation/final-mobile-wireframe.png)<br/>
 ![Figure 5](documentation/alert-message.png)<br/>
 
 ## **_Project Planning_**
